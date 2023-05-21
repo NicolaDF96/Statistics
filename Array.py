@@ -12,6 +12,7 @@ aioquic = []
 picoquic = []
 quiche = []
 ngtpc2 = []
+lsquic=[]
 
 def leggi_file_excel(nome_file):
     try:
@@ -38,6 +39,7 @@ for riga in dati_array:
     picoquic.append(riga[1])
     quiche.append(riga[2])
     ngtpc2.append(riga[3])
+    lsquic.append(riga[4])
 
 plt.hist(aioquic, edgecolor='black', bins=20)
 plt.savefig("aioquic.png")
@@ -55,3 +57,7 @@ plt.hist(ngtpc2, edgecolor='black', bins=20)
 plt.savefig("ngtpc2.png")
 plt.figure().clear()
 
+
+plt.hist(lsquic, edgecolor='black', bins=20)
+plt.savefig("lsquic.png")
+plt.figure().clear()
